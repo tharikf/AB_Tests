@@ -3,7 +3,7 @@
 import pandas as pd
 import numpy as np
 
-def cleaning(dataframe):
+def cleaning_data(dataframe):
     
     # Droping the index column
     dataframe = dataframe.drop(columns = ['Unnamed: 0', 'user id'])
