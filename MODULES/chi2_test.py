@@ -1,13 +1,14 @@
+
 from scipy.stats import chi2_contingency
 import numpy as np
 
 def chi2_test(dataframe, converted_column, variable_investigated, group1, group2):
     
-    # Number of clients in group1 in the variable investigated, split by conversion
+    # The variable investigated is split by conversion, showing the number of clients in group 1
     converted_gp1 = len(dataframe[(dataframe[variable_investigated] == group1) & (dataframe[converted_column] == 1)])
     not_converted_gp1 = len(dataframe[(dataframe[variable_investigated] == group1) & (dataframe[converted_column] == 0)])
     
-    # Number of clients in group2 in the variable investigated, split by conversion
+    # The variable investigated is split by conversion, showing the number of clients in group 2
     converted_gp2 = len(dataframe[(dataframe[variable_investigated] == group2) & (dataframe[converted_column] == 1)])
     not_converted_gp2 = len(dataframe[(dataframe[variable_investigated] == group2) & (dataframe[converted_column] == 0)])
     
