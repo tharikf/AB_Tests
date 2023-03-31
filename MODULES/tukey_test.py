@@ -8,7 +8,5 @@ def tukey_test(dataframe, target_variable, independent_variable):
     tukey_results = pairwise_tukeyhsd(dataframe[target_variable], dataframe[independent_variable])
     
     # Printing results
-    print(tukey_results)
+    return print(tukey_results)
     
-    #return cross_df
-
